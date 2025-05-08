@@ -33,4 +33,4 @@ jobs:
           path: ./downloaded-artifacts
 
     - name: List downloaded artifact files
-        run: ls -la downloaded-artifacts
+      run: ls -la downloaded-artifacts
