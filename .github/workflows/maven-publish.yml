@@ -20,20 +20,11 @@ jobs:
     - name: Build project with Maven
       run: mvn -B package --file pom.xml
 
-    - name: List target directory
-      run: ls -la target
+    - name: list package
+      run: ls -ltr target
 
     - name: Upload JAR as artifact
       uses: actions/upload-artifact@v3
       with:
         name: built-jar
         path: target/*.jar
-    
-    - name: Download the JAR artifact
-      uses: actions/download-artifact@v3
-      with:
-        name: built-jar
-        path: ./downloaded-artifacts
-
-    - name: List downloaded artifact files
-      run: ls -la downloaded-artifacts
