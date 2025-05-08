@@ -19,3 +19,6 @@ jobs:
 
     - name: Build project with Maven
       run: mvn -B package --file pom.xml
+
+    - name: list package
+      run: ls -ltr target
