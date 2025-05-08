@@ -37,3 +37,7 @@ jobs:
 
     - name: List downloaded artifact files
       run: ls -la downloaded-artifacts
+    - name: Find out jars
+      run: |
+          JAR_FILE=$(ls downloaded-artifacts/*.jar | head -n 1)
+          echo "Running Veracode scan on $JAR_FILE"
