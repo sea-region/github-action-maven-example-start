@@ -23,14 +23,14 @@ jobs:
     - name: Download the JAR artifact
       uses: actions/download-artifact@v3
       with:
-          name: built-jar
-          path: ./downloaded-artifacts
+        name: built-jar
+        path: ./downloaded-artifacts
     
     - name: Download the JAR artifact
       uses: actions/download-artifact@v3
       with:
-          name: built-jar
-          path: ./downloaded-artifacts
+        name: built-jar
+        path: ./downloaded-artifacts
 
     - name: List downloaded artifact files
-      run: ls -la downloaded-artifacts
+        run: ls -la downloaded-artifacts
